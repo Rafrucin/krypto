@@ -26,7 +26,10 @@ func SetApiKey(apikey string) {
 func readApiKeyFromFile() bool {
 	data, err := os.ReadFile("apikey.txt")
 	if err != nil || len(data) == 0 {
-		return false
+		data, err = os.ReadFile("../apikey.txt")
+		if err != nil || len(data) == 0 {
+			return false
+		}
 	}
 	services.ApiKey = string(data)
 	return true

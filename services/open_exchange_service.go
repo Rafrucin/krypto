@@ -66,3 +66,5 @@ func FetchRates(currencies string) ([]RateResponse, error) {
 	return rates, nil
 }
 
+
+

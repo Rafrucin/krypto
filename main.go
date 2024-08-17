@@ -26,6 +26,7 @@ func main() {
 	router := gin.Default()
 	router.GET("/", handlers.Welcome)
 	router.GET("/rates", handlers.GetRates)
+	router.GET("/exchange", handlers.ExchangeCrypto)
 	router.Run(":8080")
 }
 
